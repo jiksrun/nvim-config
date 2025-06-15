@@ -1,0 +1,82 @@
+return {
+  {
+    url = "git@github.com:saghen/blink.cmp.git",
+    enabled=false
+  }
+}
+-- local cmp = require("blink.cmp")
+-- return {
+--   {
+--     url = "git@github.com:saghen/blink.cmp.git",
+--     -- lazy = false,
+--     opts = {
+--        snippets = {
+--          expand = function(snippet, _)
+--            return LazyVim.cmp.expand(snippet)
+--          end,
+--        },
+--        appearance = {
+--          -- sets the fallback highlight groups to nvim-cmp's highlight groups
+--          -- useful for when your theme doesn't support blink.cmp
+--          -- will be removed in a future release, assuming themes add support
+--          use_nvim_cmp_as_default = false,
+--          -- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+--          -- adjusts spacing to ensure icons are aligned
+--          nerd_font_variant = "mono",
+--        },
+--        completion = {
+--          menu = {
+--           auto_show=true,
+--           draw = {
+--             treesitter = { "lsp" },
+--           },
+--          },
+--          documentation = {
+--            auto_show = false,
+--            auto_show_delay_ms = 200,
+--          },
+--          ghost_text = {
+--            enabled = false,
+--          },
+--        },
+--        keymap = {
+--          preset = "none",
+--          -- ["<tab>"] = { "select_next", "fallback" }, -- ini gabisa. gatau kenapa langsung ke fallback.
+--          ['<Tab>'] = {
+--            function(cmp)
+--              if cmp.snippet_active() then return cmp.select_next()
+--              -- else return cmp.select_and_accept() end
+--              end
+--            end,
+--            'select_next',
+--            'fallback'
+--          },
+--          -- ["<tab>"] = { "select_next" },
+--          ["<s-tab>"] = { "select_prev" },
+--          ["<enter>"] = { "select_and_accept", "fallback" },
+--          ["<C-n>"] = { 'show_signature', 'hide_signature' },
+--          ['<C-space>'] = { 'hide_signature' }, -- not working
+--        --   ['<C-space>'] = {
+--        --     function(cmp)
+--        --       return cmp.hide_signature()
+--        --       -- else return cmp.select_and_accept() end
+--        --     end,
+--        --     'hide_signature',
+--        --     'show_signature'
+--        --   },
+--        },
+--        signature = {
+--           enabled = false,
+--           window = {
+--             show_documentation = false,
+--           },
+--           trigger = {
+--             -- enabled = true,
+--             -- show_on_trigger_character = false,
+--             -- show_on_insert_on_trigger_character = false,
+--             show_on_insert = false
+--           }
+--        },
+--     },
+--   },
+-- }
