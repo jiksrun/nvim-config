@@ -5,4 +5,11 @@
 -- with `vim.api.nvim_create_autocmd`
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    local file_dir = vim.fn.expand("%:p:h")
+    vim.cmd("cd " .. file_dir)
+  end,
+  desc = "Automatically change CWD to the file's directory on buffer enter",
+})
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")

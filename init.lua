@@ -26,6 +26,13 @@ vim.g.clipboard = {
 -- disable autoformat when saving files
 vim.g.autoformat = false
 
+vim.opt.wrap = true
+vim.opt.linebreak = true
+-- vim.opt.list = false
+
+-- latexindent
+require("config.latexindent").setup()
+
 -- transparent background
 -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
