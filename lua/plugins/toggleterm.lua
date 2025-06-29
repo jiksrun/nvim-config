@@ -27,7 +27,7 @@ return {
       function _G.set_terminal_keymaps()
         local opts = { noremap = true }
         vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], opts)        -- Exit terminal mode
-        vim.api.nvim_buf_set_keymap(0, "t", "jk", [[<C-\><C-n>]], opts)           -- Alternative exit
+        -- vim.api.nvim_buf_set_keymap(0, "t", "jk", [[<C-\><C-n>]], opts)           -- Alternative exit
         vim.api.nvim_buf_set_keymap(0, "t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts) -- Move left
         vim.api.nvim_buf_set_keymap(0, "t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts) -- Move down
         vim.api.nvim_buf_set_keymap(0, "t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts) -- Move up
