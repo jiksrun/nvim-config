@@ -8,7 +8,10 @@
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
     local file_dir = vim.fn.expand("%:p:h")
-    vim.cmd("cd " .. file_dir)
+    -- vim.cmd("cd " .. file_dir)
+    if file_dir ~= "" and vim.fn.isdirectory(file_dir) == 1 then
+      vim.cmd("cd " .. file_dir)
+    end
   end,
   desc = "Automatically change CWD to the file's directory on buffer enter",
 })
