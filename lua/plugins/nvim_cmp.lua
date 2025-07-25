@@ -8,10 +8,18 @@ return {
     "hrsh7th/cmp-path",
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
+    "kristijanhusak/vim-dadbod-completion",
   },
   opts = function()
     local cmp = require("cmp")
     local luasnip = require("luasnip")
+
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = { "sql", "mysql", "plsql" },
+      callback = function()
+        vim.opt_local.omnifunc = "vim_dadbod_completion#omni"
+      end,
+    })
 
     return {
       snippet = {
@@ -34,6 +42,13 @@ return {
       experimental = {
         ghost_text = false,
       },
-    }
+    },
+    -- SQL-specific setup
+    cmp.setup.filetype("sql", {
+        sources = {
+        { name = "vim-dadbod-completion" },
+        { name = "buffer" },
+        },
+    })
   end,
 }
