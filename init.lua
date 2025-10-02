@@ -9,19 +9,25 @@ vim.cmd("colorscheme catppuccin-macchiato")
 -- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFD700" })
 
 -- enable copy and paste with wayland clipboard
-vim.opt.clipboard = ""
-vim.g.clipboard = {
-  name = "waylandClipboard",
-  copy = {
-    ["*"] = "wl-copy",
-    ["+"] = "wl-copy",
-  },
-  paste = {
-    ["*"] = "wl-paste --no-newline",
-    ["+"] = "wl-paste --no-newline",
-  },
-  cache_enabled = 0,
-}
+vim.opt.clipboard = "unnamedplus"
+-- local desktop = os.getenv("XDG_CURRENT_DESKTOP") or ""
+-- if desktop:match("Hyprland") then
+--     vim.opt.clipboard = ""
+--     vim.g.clipboard = {
+--       name = "waylandClipboard",
+--       copy = {
+--         ["*"] = "wl-copy",
+--         ["+"] = "wl-copy",
+--       },
+--       paste = {
+--         ["*"] = "wl-paste --no-newline",
+--         ["+"] = "wl-paste --no-newline",
+--       },
+--       cache_enabled = 0,
+--     }
+-- else
+--     vim.opt.clipboard = "unnamedplus"
+-- end
 
 -- disable autoformat when saving files
 vim.g.autoformat = false
