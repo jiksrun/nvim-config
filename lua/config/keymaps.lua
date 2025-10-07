@@ -7,3 +7,5 @@
 -- vim.keymap.set("i", "<C-h>", function()
 --   require("blink.cmp.signature.trigger").hide()
 -- end, { desc = "Hide Blink Signature Help" })
+
+vim.keymap.set('n', "<leader>t", ":ToggleAutoCwd<CR>", { desc = "Toggle Auto Change CWD" })
