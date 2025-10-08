@@ -9,3 +9,5 @@
 -- end, { desc = "Hide Blink Signature Help" })
 
 vim.keymap.set('n', "<leader>t", ":ToggleAutoCwd<CR>", { desc = "Toggle Auto Change CWD" })
+vim.keymap.set('n', "<leader>mm", ":Maven<CR>", { desc = "Maven" })
+vim.keymap.set('n', "<leader>me", ":MavenExec<CR>", { desc = "Maven Exec" })
