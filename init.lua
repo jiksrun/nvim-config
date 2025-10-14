@@ -39,6 +39,9 @@ vim.opt.linebreak = true
 -- latexindent
 require("config.latexindent").setup()
 
+-- create templatefor java
+require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/snippets" })
+
 -- transparent background
 -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
