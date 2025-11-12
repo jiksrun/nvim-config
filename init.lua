@@ -1,9 +1,9 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
--- vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme kanagawa")
 -- vim.cmd("colorscheme tokyonight-moon")
-vim.cmd("colorscheme catppuccin-macchiato")
+-- vim.cmd("colorscheme catppuccin-macchiato")
 -- vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "LineNr", { fg = "#A020F0" })
 -- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FFD700" })
@@ -47,3 +47,6 @@ require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/snippets"
 -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 -- vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'none' })
 -- vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'none' })
+
+-- no conceal (ini buat kalo lagi di .tex file)
+vim.opt.conceallevel=0

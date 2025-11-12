@@ -43,6 +43,25 @@ local function get_class_name()
 end
 
 return {
+    -- System.out.println()
+    s("sop", {
+        t("System.out.println("),
+        i(1),
+        t(");"),
+    }),
+
+    -- Java Main
+    s("javamain", {
+        f(get_package_name, {}),
+        t({ "", "", "" }),
+        t("public class "),
+        f(get_class_name, {}),
+        t({ " {", "\t" }),
+        t({ "public static void main(String[] args) {", "\t\t" }),
+        i(0),
+        t({ "", "\t}", "}" }),
+    }),
+
     -- Normal Java class
     s("javaclass", {
         f(get_package_name, {}),
