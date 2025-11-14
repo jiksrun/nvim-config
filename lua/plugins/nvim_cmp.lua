@@ -8,11 +8,14 @@ return {
     "hrsh7th/cmp-path",
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
+    "rafamadriz/friendly-snippets",
     "kristijanhusak/vim-dadbod-completion",
   },
   opts = function()
     local cmp = require("cmp")
     local luasnip = require("luasnip")
+
+    require("luasnip.loaders.from_vscode").lazy_load()
 
     vim.api.nvim_create_autocmd("FileType", {
       pattern = { "sql", "mysql", "plsql" },
